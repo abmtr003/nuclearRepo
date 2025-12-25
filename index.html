@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Nuclear Decay Simulator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>☢️ Nuclear Decay Simulator</h1>
+
+<section>
+  <h2>Radioactive Decay Law</h2>
+  <p><strong>N(t) = N₀ e<sup>-λt</sup></strong></p>
+  <p><strong>T<sub>1/2</sub> = ln(2) / λ</strong></p>
+</section>
+
+<section class="controls">
+  <label>
+    Initial nuclei N₀:
+    <input type="number" id="n0" value="1000">
+  </label>
+
+  <label>
+    Decay constant λ:
+    <input type="number" id="lambda" step="0.001" value="0.1">
+  </label>
+
+  <label>
+    Time t:
+    <input type="number" id="time" value="10">
+  </label>
+
+  <button onclick="simulate()">Simulate</button>
+</section>
+
+<section class="results">
+  <h2>Results</h2>
+  <p id="remaining"></p>
+  <p id="decayed"></p>
+  <p id="halfLife"></p>
+</section>
+
+<canvas id="chart" width="600" height="300"></canvas>
+
+<script src="script.js"></script>
+</body>
+</html>
